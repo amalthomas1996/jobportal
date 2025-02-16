@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+import { jobsData } from "../assets/assets";
 
 export const AppContext = createContext();
 
@@ -12,7 +13,7 @@ export const AppContextProvider = (props) => {
   //function to fetch data
 
   const fetchJobs = async () => {
-    setJobs(jobsdata);
+    setJobs(jobsData);
   };
   useEffect(() => {
     fetchJobs();
